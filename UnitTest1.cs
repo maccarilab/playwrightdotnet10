@@ -1,4 +1,6 @@
-﻿namespace TestProject1
+﻿using Microsoft.Playwright;
+
+namespace TestProject1
 {
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
@@ -23,6 +25,24 @@
 
             // Expects the URL to contain intro.
             await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
+        }
+        [Test]
+        public async Task SitoConScreenshot()
+        {
+            await using var browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            {
+                Headless = true,
+            });
+            var context = await browser.NewContextAsync();
+            var page = await context.NewPageAsync();
+            await page.GotoAsync("https://www.pendolariumbri.it/");
+            await page.WaitForTimeoutAsync(3000);
+            await page.ScreenshotAsync(new()
+            {
+                Path = "./../../../Screenshot/HomeScreenshot.jpg",
+                FullPage = true
+            });
+
         }
     }
 }
