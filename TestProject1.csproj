@@ -24,8 +24,4 @@
     <Using Include="System.Threading.Tasks" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Screenshot\" />
-  </ItemGroup>
-
 </Project>
