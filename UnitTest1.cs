@@ -31,7 +31,7 @@ namespace TestProject1
         {
             await using var browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = false,
+                Headless = true,
             });
             var context = await browser.NewContextAsync();
             var page = await context.NewPageAsync();
@@ -39,7 +39,7 @@ namespace TestProject1
             await page.WaitForTimeoutAsync(3000);
             await page.ScreenshotAsync(new()
             {
-                Path = "./../../../Screenshot/HomeScreenshot.jpg",
+                Path = "./../../../Screenshot/HomeScreenshot1.jpg",
                 FullPage = true
             });
 
