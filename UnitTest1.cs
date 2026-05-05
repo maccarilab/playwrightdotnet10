@@ -39,7 +39,7 @@ namespace TestProject1
             await page.WaitForTimeoutAsync(3000);
             await page.ScreenshotAsync(new()
             {
-                Path = "HomeScreenshot1.jpg",
+                Path = "./HomeScreenshot1.jpg",
                 FullPage = true
             });
 
