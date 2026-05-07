@@ -41,16 +41,16 @@ namespace TestProject1
             
             await page.WaitForTimeoutAsync(3000);
 
-            var mypath = TestContext.CurrentContext.WorkDirectory;
-
-            //Directory.CreateDirectory()
-            var mypathdemo = Path.Combine(mypath, "demo.png");
+        //    var mypath0 = TestContext.CurrentContext.WorkDirectory;
+          //  var newdir = Directory.CreateDirectory("Screenshot1");
+           // mypath = mypath.ToString() + newdir.ToString();
+          //  var mypathdemoNew = Path.Combine(mypath, "demo.png");
 
 
             await page.ScreenshotAsync(new()
             {
                // Path = "./../../../Screenshot/HomeScreenshot1.jpg",
-                Path = mypathdemo,
+                Path = "demo.png",
                 FullPage = true
             });
 
