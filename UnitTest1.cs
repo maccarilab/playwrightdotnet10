@@ -49,8 +49,8 @@ namespace TestProject1
 
             await page.ScreenshotAsync(new()
             {
-                Path = "./../../../Screenshot/HomeScreenshot1.jpg",
-               // Path = mypathdemo,
+               // Path = "./../../../Screenshot/HomeScreenshot1.jpg",
+                Path = mypathdemo,
                 FullPage = true
             });
 
