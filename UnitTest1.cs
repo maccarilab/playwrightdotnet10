@@ -44,6 +44,7 @@ namespace TestProject1
             //Directory.CreateDirectory()
             var mypathdemo = Path.Combine(mypath, "demo.png");
 
+
             await page.ScreenshotAsync(new()
             {
                 //Path = "./../../../Screenshot/HomeScreenshot1.jpg",
