@@ -29,6 +29,7 @@ namespace TestProject1
         [Test]
         public async Task SitoConScreenshot()
         {
+
             await using var browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = true,
@@ -37,9 +38,16 @@ namespace TestProject1
             var page = await context.NewPageAsync();
             await page.GotoAsync("https://www.pendolariumbri.it/");
             await page.WaitForTimeoutAsync(3000);
+
+            var mypath = TestContext.CurrentContext.WorkDirectory;
+
+            //Directory.CreateDirectory()
+            var mypathdemo = Path.Combine(mypath, "demo.png");
+
             await page.ScreenshotAsync(new()
             {
-                Path = "./../../../Screenshot/HomeScreenshot1.jpg",
+                //Path = "./../../../Screenshot/HomeScreenshot1.jpg",
+                Path = mypathdemo,
                 FullPage = true
             });
 
