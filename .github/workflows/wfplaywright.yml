@@ -21,14 +21,8 @@ jobs:
     - name: Run your tests con screenshot
       run: dotnet test
       
-    - name: Upload ExtentReport
+    - name: Upload Report
       uses: actions/upload-artifact@v5
       with:
         name: Test-Report
-        path: ScreenShot/index.html
-
-    - name: Upload ExtentReportScreenshot
-      uses: actions/upload-artifact@v5
-      with:
-        name: Test-Report ScreenShot
-        path: ScreenShot/TestExecLog_*.png
+        path: ScreenShot/HomeScreenshot1.jpg
