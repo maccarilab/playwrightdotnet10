@@ -36,8 +36,8 @@ namespace TestProject1
             });
             var context = await browser.NewContextAsync();
             var page = await context.NewPageAsync();
- //           await page.GotoAsync("https://www.pendolariumbri.it/");
-            await page.GotoAsync("https://maccarilab.github.io/");           
+            await page.GotoAsync("https://www.pendolariumbri.it/");
+   //         await page.GotoAsync("https://maccarilab.github.io/");           
             
             await page.WaitForTimeoutAsync(3000);
 
@@ -49,8 +49,8 @@ namespace TestProject1
 
             await page.ScreenshotAsync(new()
             {
-               // Path = "./../../../Screenshot/HomeScreenshot1.jpg",
-                Path = "demo.png",
+                Path = "./../../../Screenshot/HomeScreenshot1.jpg",
+               // Path = "demo.png",
                 FullPage = true
             });
 
